@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+}
+
+p,h2 {
+    font-family: 'Josefin Slab', serif;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+}
+
+#logo {
+    animation: rotate 2s ease-in-out 1;
+}
+
+@keyframes rotate {
+    0% {width: 5%}
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (min-width:350px) {
+    footer {
+      position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+    
+    footer img{
+        width: 30px;
+        margin-right: 5px;
+        margin-left: 5px;
+        float: left;
+    }
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: contents;
+    }
+
+    /*home*/
+    .home {
+        text-align: center;
+        background-image: url(header.png);
+        background-size: 100vw 100%;
+        background-repeat: no-repeat;
+    }
+ main {
+        margin-top: 3em;
+    }
+
+    #logo {
+        width: 150px;
+        margin-bottom: 6em;
+    }
+
+
+    .navbar {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 100%;
+    }
+
+    .navbar .item {
+        display: block;
+        text-align: center;
+        font-family: 'Amatic SC', cursive;
+        font-size: 40px;
+        text-decoration: none;
+        margin-bottom: 2em;
+    }
+
+    a:link {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #879193;
+        text-decoration: none;
+    }
+
+    a:active {
+        color: #879193;
+        text-decoration: none;
+    }
+
+
+    /*aboutme*/
+  .normal {
+        background-image: url(smallheader.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    
+   header .toggle-btn {
+    margin-left:85%;
+        right: 10px;
+    width: 45px;
+        cursor: pointer;
+    }
+
+    header span {
+        position: relative;
+        top: 0px;
+        display: block;
+        width: 100%;
+        height: 5px;
+        margin: 10px 0px;
+        background-color: black;
+    }
+
+    header .toggle-btn.active span:nth-child(1) {
+        top: 15px;
+        transform: rotate(45deg);
+        transition: top 200ms ease-in-out 0ms, transform 250ms ease-in-out 150ms;
+    }
+
+    header .toggle-btn.active span:nth-child(3) {
+        top: -15px;
+        transform: rotate(-45deg);
+        transition: top 200ms ease-in-out 0ms, transform 250ms ease-in-out 150ms;
+    }
+
+    header .toggle-btn.active span:nth-child(2) {
+        opacity: 0;
+        transition: opacity 50ms ease-in-out 150ms;
+    }
+
+    header .toggle-btn span:nth-child(1),
+    header .toggle-btn span:nth-child(3) {
+        transition: transform 250ms ease-in-out 0ms, top 200ms ease-in-out 150ms;
+    }
+
+    header .toggle-btn span:nth-child(2) {
+        opacity: 1;
+        transition: opacity 50ms ease-in-out 200ms;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 45px;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #F2E3E0;
+        padding: 15px;
+        transition: all 450ms ease-in-out;
+        z-index: 1;
+    }
+    .sidebar .item{
+        font-size: 40px;
+        padding: 30px 5px;
+        color: black;
+        text-align: center;
+        font-family: 'Amatic SC', cursive;
+    }
+    a:link {
+        color: black;
+        text-decoration: none;
+    }
+    .sidebar.active {
+        opacity: 1;
+        right: 0px;
+    }
+
+    .aboutme h1 {
+        font-size: 40px;
+        margin-left: 1.5em;
+        margin-top: 1em;
+        text-align: left;
+    }
+
+    .aboutme p {
+        margin-top: 2em;
+        font-size: 20px;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        text-align: left;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .column {
+        float:left;
+        width: 100%;
+text-align: center;
+    }
+   
+    .title {
+        background-image: url(pink.png);
+        background-size: 100% 100%;
+    }
+
+    #profile {
+        width: 70%;
+        margin-left: 10%;
+    }
+   
+ /*contact*/
+    .pinkback {
+        background-color: #EED5D0;
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .pinkback h1 {
+        font-size: 30px;
+    }
+
+    .pinkback a {
+        font-size: 20px;
+        font-family: 'Josefin Slab', serif;
+    }
+    .pinkback h1, a {
+        margin-top: 2em;
+    }
+    /*portfolio*/
+    
+  #portfolio {
+        width: 100%;
+    }
+        #portfolio h1 {
+        font-size: 50px;
+    }
+    #portfolio h2 {
+        font-size: 25px;
+    }
+    .column3{
+        float: left;
+        width: 100%;;
+        padding: 3em;
+        text-align: center;
+    }
+    .column3 img{
+        margin-bottom: 2em;
+        transition: transform 1s;
+    }
+    .column3 img:hover{
+        transform: scale(1.15);
+    }
+      #animation {
+        margin-bottom: 0;
+    }
+
+    
+}
+    
+@media only screen and (min-width:900px) {
+    .desktop {
+        display: contents;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .home {
+        text-align: center;
+        background-image: url(header.png);
+        background-size: 100vw 100%;
+        background-repeat: no-repeat;
+    }
+    
+    header img {
+    width: 30px;
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+    main {
+        margin-top: 5em;
+    }
+
+    #logo {
+        width: 200px;
+        margin-top: 3em;
+        margin-bottom: 4em;
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+    }
+
+    .navbar .item {
+        display: inline-block;
+        text-align: center;
+        font-family: 'Amatic SC', cursive;
+        font-size: 45px;
+        text-decoration: none;
+        margin-bottom: 1em;
+    }
+
+    a:link {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #879193;
+        text-decoration: none;
+    }
+
+    a:active {
+        color: #879193;
+        text-decoration: none;
+    }
+
+   
+
+    /*aboutme*/
+
+    .normal {
+        background-image: url(smallheader.png);
+        background-repeat: no-repeat;
+        background-size: 100% 90%;
+    }
+
+    .navbar2 {
+        display: grid;
+        grid-template-columns: 30% 1fr 1fr 1fr 1fr;
+        width: 100%;
+    }
+
+    .navbar2 .item {
+        display: inline-block;
+        font-family: 'Amatic SC', cursive;
+        font-size: 40px;
+        text-decoration: none;
+        margin-bottom: 0.2em;
+        text-align: center;
+    }
+
+    #logo2 {
+        position: absolute;
+        z-index: -1;
+        margin-right: 0px;
+        margin-left: 27%;
+        width: 40px;
+        margin-top: 0;
+
+    }
+
+    .aboutme h1 {
+        font-size: 60px;
+        margin-left: 1.5em;
+        text-align: left;
+    }
+
+    .aboutme p {
+        margin-top: 2em;
+        font-size: 20px;
+        margin-left: 4em;
+        text-align: left;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .column {
+        float: left;
+        width: 50%;
+
+    }
+
+    .title {
+        background-image: url(pink.png);
+        background-size: 100% 100%;
+    }
+
+    #profile {
+        width: 70%;
+        margin-left: 5%;
+    }
+
+    /*contact*/
+
+    .pinkback {
+        background-color: #EED5D0;
+        width: 70%;
+        height: 20em;
+        margin-top: 15%;
+    }
+
+
+    .pinkback {
+        text-align: center;
+    }
+
+    .pinkback h1 {
+        font-size: 30px;
+    }
+
+    .pinkback a {
+        font-size: 20px;
+        font-family: 'Josefin Slab', serif;
+    }
+  .pinkback h1, a {
+        margin-top: 0em;
+    }
+    /*portfolio*/
+    #portfolio {
+        width: 100%;
+    }
+        #portfolio h1 {
+        font-size: 50px;
+    }
+    #portfolio h2 {
+        font-size: 25px;
+    }
+    .column3{
+        float: left;
+        width: 50%;
+        padding: 3em;
+        text-align: center;
+    }
+    .column3 img{
+        margin-bottom: 2em;
+        transition: transform 1s;
+    }
+    .column3 img:hover{
+        transform: scale(1.15);
+    }
+    #animation {
+        margin-bottom: 2em;
+    }
+}
+
+@media only screen and (min-width:1200px) {
+
+    .desktop {
+        display: contents;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+
+    /*home page*/
+    .home {
+        text-align: center;
+        background-image: url(header.png);
+        background-size: 100vw 100%;
+        background-repeat: no-repeat;
+    }
+    header img {
+    width: 30px;
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+    main {
+        margin-top: 5em;
+    }
+
+    #logo {
+        margin-top: 3em;
+        margin-bottom: 4em;
+        width: 300px;
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+    }
+
+    .navbar .item {
+        display: inline-block;
+        text-align: center;
+        font-family: 'Amatic SC', cursive;
+        font-size: 50px;
+        text-decoration: none;
+        margin-top: 2em;
+    }
+
+    a:link {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #879193;
+        text-decoration: none;
+    }
+
+    a:active {
+        color: #879193;
+        text-decoration: none;
+    }
+
+    .homecontent img {
+        width: 80%;
+        margin-top: 1em;
+    }
+
+
+    /*about me*/
+
+    .normal {
+        background-image: url(smallheader.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .navbar2 {
+        display: grid;
+        grid-template-columns: 50% 1fr 1fr 1fr 1fr;
+        width: 100%;
+    }
+
+    .navbar2 .item {
+        display: inline-block;
+        font-family: 'Amatic SC', cursive;
+        font-size: 45px;
+        text-decoration: none;
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+        text-align: center;
+    }
+
+    .normal img {
+        padding-top: 0.5em;
+    }
+
+    #logo2 {
+        position: absolute;
+        z-index: -1;
+        margin-right: 0px;
+        margin-left: 45%;
+        width: 65px;
+        margin-top: 0px;
+        padding-top: 0;
+
+    }
+
+    .aboutme h1 {
+        font-size: 60px;
+        margin-left: 1.5em;
+        margin-top: 2em;
+        text-align: left;
+    }
+
+    .aboutme p {
+        margin-top: 2em;
+        font-size: 20px;
+        margin-left: 4em;
+        text-align: left;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .column {
+        float: left;
+        width: 50%;
+    }
+
+    .title {
+        background-image: url(pink.png);
+        background-size: 100% 100%;
+    }
+
+    #profile {
+        width: 60%;
+        margin-left: 0px;
+    }
+
+
+    /*contact*/
+
+    .pinkback {
+        background-color: #EED5D0;
+        width: 70%;
+        height: 20em;
+        margin-top: 15%;
+        text-align: center;
+    }
+
+    .pinkback h1 {
+        font-size: 30px;
+    }
+
+    .pinkback a {
+        font-size: 20px;
+        font-family: 'Josefin Slab', serif;
+    }
+     .pinkback h1, a {
+        margin-top: 0em;
+    }
+    
+/*portfolio*/
+    #portfolio {
+        width: 100%;
+    }
+        #portfolio h1 {
+        font-size: 50px;
+    }
+    #portfolio h2 {
+        font-size: 25px;
+    }
+    .column3{
+        float: left;
+        width: 33.3%;
+        padding: 3em;
+        text-align: center;
+    }
+    .column3 img{
+        margin-bottom: 2em;
+        transition: transform 1s;
+    }
+    .column3 img:hover{
+        transform: scale(1.15);
+    }
+      #animation {
+        margin-bottom: 0;
+    }
+}
